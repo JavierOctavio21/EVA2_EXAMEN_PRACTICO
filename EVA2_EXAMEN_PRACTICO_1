@@ -1,0 +1,59 @@
+import java.util.*;
+/**
+ * @author Javier Octavio y Axel Tello
+ */
+public class Main {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int valor1, laezpc, empate, ganes, pcwin;
+        
+        valor1 = 0;
+        laezpc = 0;
+        empate = 0;
+        ganes = 0;
+        pcwin = 0;
+        while (valor1 != 4) {
+            System.out.println("Elige un número; 1 para papel, 2 para tijera, 3 para piedra  (4 para salir):");
+            valor1 = input.nextInt();
+            while (valor1 > 4 || valor1 < 1) {
+                System.out.println("Ese número no esta disponible");
+                valor1 = input.nextInt();
+            }
+            laezpc = (int)(Math.random() * 3) + 1;
+            System.out.println(laezpc);
+            if (valor1 == 3 && laezpc == 1 || valor1 == 1 && laezpc == 2 || valor1 == 2 && laezpc == 3) {
+                pcwin = pcwin + 1;
+                System.out.println("Gana la máquina");
+                System.out.println("Ganadas por tí: " + ganes);
+                System.out.println("Ganadas por la PC: " + pcwin);
+                System.out.println("Empates: " + empate);
+            } else {
+                if (laezpc == 3 && valor1 == 1 || laezpc == 1 && valor1 == 2 || laezpc == 2 && valor1 == 3) {
+                    ganes = ganes + 1;
+                    System.out.println("Ganas tu");
+                    System.out.println("Ganadas por tí: " + ganes);
+                    System.out.println("Ganadas por la PC: " + pcwin);
+                    System.out.println("Empates: " + empate);
+                } else {
+                    if (valor1 == laezpc) {
+                        empate = empate + 1;
+                        System.out.println("Empataron");
+                        System.out.println("Ganadas por tí: " + ganes);
+                        System.out.println("Ganadas por la PC: " + pcwin);
+                        System.out.println("Empates: " + empate);
+                    }
+
+        }
+        if (ganes > pcwin)
+            System.out.println("El Usuario ha Ganado");
+        else if (pcwin > ganes)
+            System.out.println("La PC ha Ganado");
+        else System.out.println("Han quedado Empatados");
+            }
+        }   
+    }
+}
