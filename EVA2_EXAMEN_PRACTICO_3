@@ -1,0 +1,164 @@
+import java.util.*;
+/**
+ * @author Javier Octavio y Axel Tello
+ */
+public class Main {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        System.out.println("¿Tienes fiebre?");
+        boolean bFiebre;
+        bFiebre = input.nextBoolean();
+        if (bFiebre == true) {
+            System.out.println("¿Tose?");
+            boolean bTos;
+            bTos = input.nextBoolean();
+            if (bTos == true) {
+                System.out.println("¿Le cuesta respirar, resuella o tose con flemas?");
+                boolean bRes;
+                bRes = input.nextBoolean();
+                if (bRes == true) {
+                    System.out.println("Posible diagnóstico: neumonía o infección de las vías respiratorias");
+                } else { System.out.println("¿Le duele la cabeza?");
+                    boolean bCabeza;
+                    bCabeza = input.nextBoolean();
+                    if (bCabeza == true) {
+                        System.out.println("Posible diagnóstico: infección vírica");
+                    } else { System.out.println("¿Le duelen los huesos o las articulaciones?");
+                        boolean bDolor;
+                        bDolor = input.nextBoolean();
+                        if (bDolor == true) {
+                            System.out.println("Posible diagnóstico: infección vírica");
+                        } else { System.out.println("¿Presenta erupciones cutáneas?");
+                            boolean bCut;
+                            bCut = input.nextBoolean();
+                            if (bCut == true) {
+                                System.out.println("No se dispone de información suficiente para realizar un diagnóstico");
+                            } else { System.out.println("¿Le duele la garganta?");
+                                boolean bGarg;
+                                bGarg = input.nextBoolean();
+                                if (bGarg == true) {
+                                    System.out.println("Posible diagnóstico: infección de garganta");
+                                } else { System.out.println("¿Le duele la espalda por encima de las lumbrares, con escalofrios y fiebre?");
+                                    boolean bEspalda;
+                                    bEspalda = input.nextBoolean();
+                                    if (bEspalda == true) {
+                                        System.out.println("Posible diagnóstico: infección renal");
+                                    } else { System.out.println("¿Le duele al orinar o lo hace con más frecuencia?");
+                                        boolean bOrina;
+                                        bOrina = input.nextBoolean();
+                                        if (bOrina == true) {
+                                            System.out.println("Posible diagnóstico: infección del tracto urinarío");
+                                        } else { System.out.println("¿Ha pasado el día al sol o con mucho calor?");
+                                            boolean bCalor;
+                                            bCalor = input.nextBoolean();
+                                            if (bCalor == true) {
+                                                System.out.println("Posible diagnóstico: golpe de calor o agotamiento por calor");
+                                            } else { System.out.println("No se dispone de información suficiente para realizar un diagnóstico");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } else { System.out.println("¿Le duele la cabeza?");
+                boolean bCabeza;
+                bCabeza = input.nextBoolean();
+                if (bCabeza == true) {
+                    System.out.println("¿Tiene alguno de los siguientes síntomas: dolor cuando inclina la cabeza hacia delante, náuseas, vómitos, fuerte molestia en los ojos ante una luz brillante, somnolencia o confusión?");
+                    boolean bSintoma;
+                    bSintoma = input.nextBoolean();
+                    if (bSintoma == true) {
+                        System.out.println("Posible diagnóstico: meningitis");
+                    } else { System.out.println("¿Vomita o tiene diarrea?");
+                        boolean bDiarrea;
+                        bDiarrea = input.nextBoolean();
+                        if (bDiarrea == true) {
+                            System.out.println("Posible diagnóstico: infección del tracto digestivo");
+                        } else { System.out.println("¿Le duelen los huesos o las articulaciones?");
+                            boolean bDolor;
+                            bDolor = input.nextBoolean();
+                            if (bDolor == true) {
+                                System.out.println("Posible diagnóstico: infección vírica");
+                            } else { System.out.println("¿Presenta erupciones cutáneas?");
+                                boolean bCut;
+                                bCut = input.nextBoolean();
+                                if (bCut == true) {
+                                    System.out.println("No se dispone de información suficiente para realizar un diagnóstico");
+                                } else { System.out.println("¿Le duele la garganta?");
+                                    boolean bGarg;
+                                    bGarg = input.nextBoolean();
+                                    if (bGarg == true) {
+                                        System.out.println("Posible diagnóstico: infección de garganta");
+                                    } else { System.out.println("¿Le duele la espalda por encima de las lumbrares, con escalofrios y fiebre?");
+                                        boolean bEspalda;
+                                        bEspalda = input.nextBoolean();
+                                        if (bEspalda == true) {
+                                            System.out.println("Posible diagnóstico: infección renal");
+                                        } else { System.out.println("¿Le duele al orinar o lo hace con más frecuencia?");
+                                            boolean bOrina;
+                                            bOrina = input.nextBoolean();
+                                            if (bOrina == true) {
+                                                System.out.println("Posible diagnóstico: infección del tracto urinarío");
+                                            } else { System.out.println("¿Ha pasado el día al sol o con mucho calor?");
+                                                boolean bCalor;
+                                                bCalor = input.nextBoolean();
+                                                if (bCalor == true) {
+                                                    System.out.println("Posible diagnóstico: golpe de calor o agotamiento por calor");
+                                                } else { System.out.println("No se dispone de información suficiente para realizar un diagnóstico");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } else { System.out.println("¿Le duelen los huesos o las articulaciones?");
+                    boolean bDolor;
+                    bDolor = input.nextBoolean();
+                    if (bDolor == true) {
+                        System.out.println("Posible diagnóstico: infección vírica");
+                    } else { System.out.println("¿Presenta erupciones cutáneas?");
+                        boolean bCut;
+                        bCut = input.nextBoolean();
+                        if (bCut == true) {
+                            System.out.println("No se dispone de información suficiente para realizar un diagnóstico");
+                        } else { System.out.println("¿Le duele la garganta?");
+                            boolean bGarg;
+                            bGarg = input.nextBoolean();
+                            if (bGarg == true) {
+                                System.out.println("Posible diagnóstico: infección de garganta");
+                            } else { System.out.println("¿Le duele la espalda por encima de las lumbrares, con escalofrios y fiebre?");
+                                boolean bEspalda;
+                                bEspalda = input.nextBoolean();
+                                if (bEspalda == true) {
+                                    System.out.println("Posible diagnóstico: infección renal");
+                                } else { System.out.println("¿Le duele al orinar o lo hace con más frecuencia?");
+                                    boolean bOrina;
+                                    bOrina = input.nextBoolean();
+                                    if (bOrina == true) {
+                                        System.out.println("Posible diagnóstico: infección del tracto urinarío");
+                                    } else { System.out.println("¿Ha pasado el día al sol o con mucho calor?");
+                                        boolean bCalor;
+                                        bCalor = input.nextBoolean();
+                                        if (bCalor == true) {
+                                            System.out.println("Posible diagnóstico: golpe de calor o agotamiento por calor");
+                                        } else { System.out.println("No se dispone de información suficiente para realizar un diagnóstico");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } else { System.out.println("No se dispone de información suficiente para realizar un diagnóstico");
+        }
+    }
+}
